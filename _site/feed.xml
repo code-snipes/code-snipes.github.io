@@ -1,20 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-08-03T16:00:30+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Code Snipes</title><subtitle>Some Documentation to all the different helpers to automize and simlify your daily work by using script snipes.</subtitle><entry><title type="html">PowerBI report with Azure Site Recovery</title><link href="http://0.0.0.0:4000/jekyll/update/2020/08/03/PowerBI-report-with-Azure-Site-Recovery.html" rel="alternate" type="text/html" title="PowerBI report with Azure Site Recovery" /><published>2020-08-03T14:48:51+00:00</published><updated>2020-08-03T14:48:51+00:00</updated><id>http://0.0.0.0:4000/jekyll/update/2020/08/03/PowerBI%20report%20with%20Azure%20Site%20Recovery</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/update/2020/08/03/PowerBI-report-with-Azure-Site-Recovery.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-08-03T16:12:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Code Snipes</title><subtitle>Some Documentation to all the different helpers to automize and simlify your daily work by using script snipes.</subtitle><entry><title type="html">PowerBI report with Azure Site Recovery</title><link href="http://0.0.0.0:4000/jekyll/update/2020/08/03/PowerBI-report-with-Azure-Site-Recovery.html" rel="alternate" type="text/html" title="PowerBI report with Azure Site Recovery" /><published>2020-08-03T14:48:51+00:00</published><updated>2020-08-03T14:48:51+00:00</updated><id>http://0.0.0.0:4000/jekyll/update/2020/08/03/PowerBI%20report%20with%20Azure%20Site%20Recovery</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/update/2020/08/03/PowerBI-report-with-Azure-Site-Recovery.html">&lt;!--
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** adminph-de, ps-powerbi-asr-report, N00ky2010, patrick.hayo@flsmidth.com
+--&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;h1 id=&quot;azuer-site-recovery-asr-powerbi-reporting&quot;&gt;Azuer Site Recovery (ASR) PowerBI Reporting&lt;/h1&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/graphs/contributors&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/contributors/adminph-de/ps-powerbi-asr-report.svg?style=flat-square&quot; alt=&quot;Contributors&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/network/members&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/forks/adminph-de/ps-powerbi-asr-report.svg?style=flat-square&quot; alt=&quot;Forks&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/stargazers&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/stars/adminph-de/ps-powerbi-asr-report.svg?style=flat-square&quot; alt=&quot;Stargazers&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/issues&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/issues/adminph-de/ps-powerbi-asr-report.svg?style=flat-square&quot; alt=&quot;Issues&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/blob/master/LICENSE.txt&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/license/adminph-de/ps-powerbi-asr-report.svg?style=flat-square&quot; alt=&quot;MIT License&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.linkedin.com/in/patrickhayo/?locale=en_US&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;amp;logo=linkedin&amp;amp;colorB=555&quot; alt=&quot;LinkedIn&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot;&gt;
+  &lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report&quot;&gt;
+    &lt;img src=&quot;/images/ps-powerbi-asr-report/logo.png&quot; alt=&quot;Code Snipes&quot; width=&quot;35%&quot; height=&quot;35%&quot; /&gt;
+  &lt;/a&gt;
+  &lt;p align=&quot;left&quot;&gt;
+    Output your ASR status into a PowerBI report by using PowerShell
+    &lt;br /&gt;
+    &lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/issues&quot;&gt;Bug Report&lt;/a&gt;
+    ·
+    &lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report/issues&quot;&gt;Request Feature&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;ul&gt;
+  &lt;li&gt;Azuer Site Recovery (ASR) PowerBI Reporting
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Prerequisites&quot;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#usage&quot;&gt;Usage&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contributing&quot;&gt;Contributing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#license&quot;&gt;License&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#acknowledgements&quot;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#referenzes&quot;&gt;Referenzes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">BGinfo deployment to an Azure IaaS</title><link href="http://0.0.0.0:4000/jekyll/update/2020/07/25/BGinfo-deployment-to-an-Azure-IaaS.html" rel="alternate" type="text/html" title="BGinfo deployment to an Azure IaaS" /><published>2020-07-25T14:48:51+00:00</published><updated>2020-07-25T14:48:51+00:00</updated><id>http://0.0.0.0:4000/jekyll/update/2020/07/25/BGinfo%20deployment%20to%20an%20Azure%20IaaS</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/update/2020/07/25/BGinfo-deployment-to-an-Azure-IaaS.html">&lt;!--
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;You need an installed &lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/&quot;&gt;PowerShell&lt;/a&gt; or, if you like to do it on Microsoft Visual Studio Code, you can try the Remote-Connection and let the code run in an isolated Docker container. Find the instruction on how to run here &lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/azure/azureps-in-docker?view=azps-4.4.0&quot;&gt;Using Azure PowerShell in Docker&lt;/a&gt;. It can be helpful if you use a macOS or Linux.&lt;/p&gt;
+
+&lt;p&gt;Running the script in the end, you need the Azure “AZ” module installed. Here the simple installation (it works the same way in the Docker container)
+&lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-4.4.0&quot;&gt;InstallAzure Module “AZ”&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$PSVersionTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;PSEdition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Desktop'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AzureRM&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ListAvailable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Write-Warning&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Message&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Az module not installed. Having both the AzureRM and '&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Az modules installed at the same time is not supported.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Install-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Az&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AllowClobber&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Scope&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CurrentUser&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-4.4.0&quot;&gt;Create an Azure service principal&lt;/a&gt; to run the script with SPN authentification.&lt;/p&gt;
+
+&lt;p&gt;Analyzing the generated data, &lt;a href=&quot;https://powerbi.microsoft.com/en-us/&quot;&gt;Microsoft PowerBI&lt;/a&gt; needs to be available on your computer. You can of cures use an analyzing tool of your choice and connect the generated *.csv file to it. I am not an expert in &lt;a href=&quot;https://powerbi.microsoft.com/en-us/&quot;&gt;Microsoft PowerBI&lt;/a&gt; and can not guide you to build a report. Find a description of how to import the *.csv file to the example &lt;a href=&quot;https://powerbi.microsoft.com/en-us/&quot;&gt;Microsoft PowerBI&lt;/a&gt; released in the more detailed documentation.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Clone the git reop to start:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://git.com/adminph-de/ps-powerbi-asr-report
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Change the JSON file (report.json):&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;delimiter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;reports&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;login&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;TENANT_ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;00000000-0000-0000-0000-00000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;SPN_ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;00000000-0000-0000-0000-00000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;SPN_PW&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yourSpnSecret&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;subscription&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prod&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dev&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Execute the script:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;report.ps1 &lt;span class=&quot;nt&quot;&gt;-JsonFile&lt;/span&gt; report.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Script Output in &lt;a href=&quot;https://powerbi.microsoft.com/en-us/&quot;&gt;Microsoft PowerBI&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p align=&quot;left&quot;&gt;
+  &lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report&quot;&gt;
+    &lt;img src=&quot;/images/ps-powerbi-asr-report/screenshot.png&quot; alt=&quot;Code Snipes&quot; width=&quot;45%&quot; height=&quot;45%&quot; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Find an example PowerBi report  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/example/report.pbix&lt;/code&gt; Including a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;report.csv&lt;/code&gt; example with demo data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are &lt;strong&gt;greatly appreciated&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/enterprise/2.13/user/articles/fork-a-repo&quot;&gt;Fork&lt;/a&gt; the Project&lt;/li&gt;
+  &lt;li&gt;Create your Feature Branch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout -b feature/AmazingFeature&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Commit your Changes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m 'Add some AmazingFeature'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Push to the Branch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin feature/AmazingFeature&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Open a Pull Request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Distributed under the &lt;a href=&quot;https://choosealicense.com/licenses/mit/&quot;&gt;MIT&lt;/a&gt; License. See &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt; for more information.&lt;/p&gt;
+
+&lt;h2 id=&quot;contact&quot;&gt;Contact&lt;/h2&gt;
+
+&lt;p&gt;Project Link: &lt;a href=&quot;https://github.com/adminph-de/ps-powerbi-asr-report&quot;&gt;https://github.com/adminph-de/ps-powerbi-asr-report&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;patrick.hayo@flsmidth.com&quot;&gt;Patrick Hayo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.twitter.com/N00ky2010&quot;&gt;&lt;img src=&quot;https://img.shields.io/twitter/follow/N00ky2010&quot; alt=&quot;N00ky2010&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/janainahyldvang/&quot;&gt;Janaina Laguardia Areal Hyldvang, Ph.D.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/jakobdaugaard/?locale=en_US&quot;&gt;Jakob Daugaard&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/senthil-kumar-bose-6900582/&quot;&gt;Senthil Kumar Bose&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/javed-khan-674863164/&quot;&gt;Javed Khan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;referenzes&quot;&gt;Referenzes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-4.4.0&quot;&gt;Create an Azure service principal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://powerbi.microsoft.com/en-us/&quot;&gt;Microsoft PowerBI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"></summary></entry><entry><title type="html">BGinfo deployment to an Azure IaaS</title><link href="http://0.0.0.0:4000/jekyll/update/2020/07/25/BGinfo-deployment-to-an-Azure-IaaS.html" rel="alternate" type="text/html" title="BGinfo deployment to an Azure IaaS" /><published>2020-07-25T14:48:51+00:00</published><updated>2020-07-25T14:48:51+00:00</updated><id>http://0.0.0.0:4000/jekyll/update/2020/07/25/BGinfo%20deployment%20to%20an%20Azure%20IaaS</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/update/2020/07/25/BGinfo-deployment-to-an-Azure-IaaS.html">&lt;!--
 *** Thanks for checking out this README Template. If you have a suggestion that would
 *** make this better, please fork the ps-azure-bginfo and create a pull request or simply open
 *** an issue with the tag &quot;enhancement&quot;.
@@ -45,7 +172,7 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
   &lt;a href=&quot;https://github.com/adminph-de/ps-azure-bginfo&quot;&gt;
-    &lt;img src=&quot;images/logo.png&quot; alt=&quot;Logo&quot; width=&quot;708&quot; height=&quot;274&quot; /&gt;
+    &lt;img src=&quot;/images/ps-azure-bginfo/logo.png&quot; alt=&quot;Logo&quot; width=&quot;708&quot; height=&quot;274&quot; /&gt;
   &lt;/a&gt;
 
   &lt;h3 align=&quot;center&quot;&gt;Deploy BGinfo to a single IaaS virtual machine in Azure&lt;/h3&gt;
@@ -90,7 +217,7 @@
 &lt;!-- ABOUT THE PROJECT --&gt;
 &lt;h2 id=&quot;about-the-project&quot;&gt;About The Project&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/sysinternals/downloads/bginf&quot;&gt;&lt;img src=&quot;images/screenshot.png&quot; alt=&quot;Product Name Screen Shot&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/sysinternals/downloads/bginf&quot;&gt;&lt;img src=&quot;/images/ps-azure-bginfo/screenshot.png&quot; alt=&quot;Product Name Screen Shot&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;BGinfo is a tool to show various information on your desktop wallpaper. The Screenshot above you shows the output of the included config.bgi. We deploy this configuration file to all our virtual machines in Azure to set a company standard. The information helps us to be always aware of which server you are currently interacting. Especially during troubleshooting sessions, the information on the desktop helps us double-check our work by managing various tasks between open RDP sessions.&lt;/p&gt;
 
@@ -159,7 +286,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/screenshot_run.png&quot; alt=&quot;Product Name Screen Shot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ps-azure-bginfo/screenshot_run.png&quot; alt=&quot;Product Name Screen Shot&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Copy the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.bgi&lt;/code&gt; file 
@@ -207,20 +334,122 @@ Finally you can copy the &lt;code class=&quot;language-plaintext highlighter-rou
 &lt;/ul&gt;
 
 &lt;!-- MARKDOWN LINKS &amp; IMAGES --&gt;
-&lt;!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"></summary></entry><entry><title type="html">Azure Login with SPN Account</title><link href="http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html" rel="alternate" type="text/html" title="Azure Login with SPN Account" /><published>2020-07-18T14:48:51+00:00</published><updated>2020-07-18T14:48:51+00:00</updated><id>http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure%20Login%20with%20SPN%20Account</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"></summary></entry><entry><title type="html">Azure Login with SPN Account</title><link href="http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html" rel="alternate" type="text/html" title="Azure Login with SPN Account" /><published>2020-07-18T14:48:51+00:00</published><updated>2020-07-18T14:48:51+00:00</updated><id>http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure%20Login%20with%20SPN%20Account</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html">&lt;!--
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** adminph-de, ps-azure-spn-login, N00ky2010, patrick.hayo@flsmidth.com
+--&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;h1 id=&quot;azuer-service-principal-spn-login&quot;&gt;Azuer Service Principal (SPN) Login&lt;/h1&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/graphs/contributors&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/contributors/adminph-de/ps-azure-spn-login.svg?style=flat-square&quot; alt=&quot;Contributors&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/network/members&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/forks/adminph-de/ps-azure-spn-login.svg?style=flat-square&quot; alt=&quot;Forks&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/stargazers&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/stars/adminph-de/ps-azure-spn-login.svg?style=flat-square&quot; alt=&quot;Stargazers&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/issues&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/issues/adminph-de/ps-azure-spn-login.svg?style=flat-square&quot; alt=&quot;Issues&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/blob/master/LICENSE.txt&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/license/adminph-de/ps-azure-spn-login.svg?style=flat-square&quot; alt=&quot;MIT License&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.linkedin.com/in/patrickhayo/?locale=en_US&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;amp;logo=linkedin&amp;amp;colorB=555&quot; alt=&quot;LinkedIn&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot;&gt;
+  &lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login&quot;&gt;
+    &lt;img src=&quot;/images/ps-azure-spn-login/logo.png&quot; alt=&quot;Code Snipes&quot; width=&quot;35%&quot; height=&quot;35%&quot; /&gt;
+  &lt;/a&gt;
+  &lt;p align=&quot;left&quot;&gt;
+    Use Azure SPN Account to run your PowerShell scripts.
+    &lt;br /&gt;
+    &lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/issues&quot;&gt;Bug Report&lt;/a&gt;
+    ·
+    &lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login/issues&quot;&gt;Request Feature&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;ul&gt;
+  &lt;li&gt;Azuer Service Principal (SPN) Login
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#usage&quot;&gt;Usage&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contributing&quot;&gt;Contributing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#license&quot;&gt;License&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#acknowledgements&quot;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#referenzes&quot;&gt;Referenzes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Clone the git reop to start:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://git.com/adminph-de/ps-azure-spn-login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Change the JSON file (spn-login.json):&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+       &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;object&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+           &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;TENANT_ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0000000-0000-0000-0000-00000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+           &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;SPN_ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0000000-0000-0000-0000-00000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+           &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;SPN_PW&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yourSecretSPNpassword&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Execute the script:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spn-login.ps1 &lt;span class=&quot;nt&quot;&gt;-JsonFile&lt;/span&gt; spn-account.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Script Output:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;You are authenicated (SPN) by:
+SPN_ID    : 0000000-0000-0000-0000-00000000000
+TENANT_ID : 0000000-0000-0000-0000-00000000000
+Don't forget to select a Subscrtiption by going ahead
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Check my usage of the code-snipe as an example in &lt;a href=&quot;http://github.code-snipes.de/ps-powerbi-asr-report&quot;&gt;ps-powerbi-asr-report&lt;/a&gt;. I used it in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;report.ps1&lt;/code&gt; script to authenticate before executing the script.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are &lt;strong&gt;greatly appreciated&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/enterprise/2.13/user/articles/fork-a-repo&quot;&gt;Fork&lt;/a&gt; the Project&lt;/li&gt;
+  &lt;li&gt;Create your Feature Branch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout -b feature/AmazingFeature&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Commit your Changes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m 'Add some AmazingFeature'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Push to the Branch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin feature/AmazingFeature&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Open a Pull Request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Distributed under the &lt;a href=&quot;https://choosealicense.com/licenses/mit/&quot;&gt;MIT&lt;/a&gt; License. See &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt; for more information.&lt;/p&gt;
+
+&lt;h2 id=&quot;contact&quot;&gt;Contact&lt;/h2&gt;
+
+&lt;p&gt;Project Link: &lt;a href=&quot;https://github.com/adminph-de/ps-azure-spn-login&quot;&gt;https://github.com/adminph-de/ps-azure-spn-login&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;patrick.hayo@flsmidth.com&quot;&gt;Patrick Hayo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.twitter.com/N00ky2010&quot;&gt;&lt;img src=&quot;https://img.shields.io/twitter/follow/N00ky2010&quot; alt=&quot;N00ky2010&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/janainahyldvang/&quot;&gt;Janaina Laguardia Areal Hyldvang, Ph.D.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/jakobdaugaard/?locale=en_US&quot;&gt;Jakob Daugaard&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/senthil-kumar-bose-6900582/&quot;&gt;Senthil Kumar Bose&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/javed-khan-674863164/&quot;&gt;Javed Khan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;referenzes&quot;&gt;Referenzes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-4.4.0&quot;&gt;How to: Create an Azure service principal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"></summary></entry></feed>

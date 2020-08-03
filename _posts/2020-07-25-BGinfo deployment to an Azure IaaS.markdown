@@ -41,7 +41,7 @@ categories: jekyll update
 <br />
 <p align="center">
   <a href="https://github.com/adminph-de/ps-azure-bginfo">
-    <img src="images/logo.png" alt="Logo" width="708" height="274">
+    <img src="{{site.baseurl}}/images/ps-azure-bginfo/logo.png" alt="Logo" width="708" height="274">
   </a>
 
   <h3 align="center">Deploy BGinfo to a single IaaS virtual machine in Azure</h3>
@@ -220,5 +220,5 @@ Project Link: [https://github.com/adminph-de/ps-azure-bginfo](https://github.com
 [license-url]: https://github.com/adminph-de/ps-azure-bginfo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/patrickhayo-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/patrickhayo/?locale=en_US
-[product-screenshot]: images/screenshot.png
-[product-screenshot-run]: images/screenshot_run.png
+[product-screenshot]: {{site.baseurl}}/images/ps-azure-bginfo/screenshot.png
+[product-screenshot-run]: {{site.baseurl}}/images/ps-azure-bginfo/screenshot_run.png

@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Azure Login with SPN Account" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated." />
-<meta property="og:description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated." />
+<meta name="description" content="Some Documentation to all the different helpers to automize and simlify your daily work by using script snipes." />
+<meta property="og:description" content="Some Documentation to all the different helpers to automize and simlify your daily work by using script snipes." />
 <link rel="canonical" href="http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html" />
 <meta property="og:site_name" content="Code Snipes" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-18T14:48:51+00:00" />
 <script type="application/ld+json">
-{"headline":"Azure Login with SPN Account","dateModified":"2020-07-18T14:48:51+00:00","datePublished":"2020-07-18T14:48:51+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html"},"url":"http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html","description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"Azure Login with SPN Account","dateModified":"2020-07-18T14:48:51+00:00","datePublished":"2020-07-18T14:48:51+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html"},"url":"http://0.0.0.0:4000/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html","description":"Some Documentation to all the different helpers to automize and simlify your daily work by using script snipes.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Code Snipes" /></head>
 <body><header class="site-header" role="banner">
@@ -45,24 +45,125 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <!--
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** adminph-de, ps-azure-spn-login, N00ky2010, patrick.hayo@flsmidth.com
+-->
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<h1 id="azuer-service-principal-spn-login">Azuer Service Principal (SPN) Login</h1>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p><a href="https://github.com/adminph-de/ps-azure-spn-login/graphs/contributors"><img src="https://img.shields.io/github/contributors/adminph-de/ps-azure-spn-login.svg?style=flat-square" alt="Contributors" /></a>
+<a href="https://github.com/adminph-de/ps-azure-spn-login/network/members"><img src="https://img.shields.io/github/forks/adminph-de/ps-azure-spn-login.svg?style=flat-square" alt="Forks" /></a>
+<a href="https://github.com/adminph-de/ps-azure-spn-login/stargazers"><img src="https://img.shields.io/github/stars/adminph-de/ps-azure-spn-login.svg?style=flat-square" alt="Stargazers" /></a>
+<a href="https://github.com/adminph-de/ps-azure-spn-login/issues"><img src="https://img.shields.io/github/issues/adminph-de/ps-azure-spn-login.svg?style=flat-square" alt="Issues" /></a>
+<a href="https://github.com/adminph-de/ps-azure-spn-login/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/adminph-de/ps-azure-spn-login.svg?style=flat-square" alt="MIT License" /></a>
+<a href="https://www.linkedin.com/in/patrickhayo/?locale=en_US"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn" /></a></p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p><br /></p>
+<p align="left">
+  <a href="https://github.com/adminph-de/ps-azure-spn-login">
+    <img src="/images/ps-azure-spn-login/logo.png" alt="Code Snipes" width="35%" height="35%" />
+  </a>
+  <p align="left">
+    Use Azure SPN Account to run your PowerShell scripts.
+    <br />
+    <a href="https://github.com/adminph-de/ps-azure-spn-login/issues">Bug Report</a>
+    ·
+    <a href="https://github.com/adminph-de/ps-azure-spn-login/issues">Request Feature</a>
+  </p>
+</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h2 id="content">Content</h2>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<ul>
+  <li>Azuer Service Principal (SPN) Login
+    <ul>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#contributing">Contributing</a></li>
+      <li><a href="#license">License</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#acknowledgements">Acknowledgements</a></li>
+      <li><a href="#referenzes">Referenzes</a></li>
+    </ul>
+  </li>
+</ul>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<h2 id="installation">Installation</h2>
 
+<p>Clone the git reop to start:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://git.com/adminph-de/ps-azure-spn-login
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Change the JSON file (spn-login.json):</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"TENANT_ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000-0000-0000-0000-00000000000"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"SPN_ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000-0000-0000-0000-00000000000"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"SPN_PW"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yourSecretSPNpassword"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Execute the script:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spn-login.ps1 <span class="nt">-JsonFile</span> spn-account.json
+</code></pre></div></div>
+
+<p>Script Output:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are authenicated (SPN) by:
+SPN_ID    : 0000000-0000-0000-0000-00000000000
+TENANT_ID : 0000000-0000-0000-0000-00000000000
+Don't forget to select a Subscrtiption by going ahead
+</code></pre></div></div>
+<blockquote>
+  <p>Check my usage of the code-snipe as an example in <a href="http://github.code-snipes.de/ps-powerbi-asr-report">ps-powerbi-asr-report</a>. I used it in the <code class="language-plaintext highlighter-rouge">report.ps1</code> script to authenticate before executing the script.</p>
+</blockquote>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p>
+
+<ol>
+  <li><a href="https://docs.github.com/en/enterprise/2.13/user/articles/fork-a-repo">Fork</a> the Project</li>
+  <li>Create your Feature Branch <code class="language-plaintext highlighter-rouge">git checkout -b feature/AmazingFeature</code></li>
+  <li>Commit your Changes <code class="language-plaintext highlighter-rouge">git commit -m 'Add some AmazingFeature'</code></li>
+  <li>Push to the Branch <code class="language-plaintext highlighter-rouge">git push origin feature/AmazingFeature</code></li>
+  <li>Open a Pull Request</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>Distributed under the <a href="https://choosealicense.com/licenses/mit/">MIT</a> License. See <code class="language-plaintext highlighter-rouge">LICENSE</code> for more information.</p>
+
+<h2 id="contact">Contact</h2>
+
+<p>Project Link: <a href="https://github.com/adminph-de/ps-azure-spn-login">https://github.com/adminph-de/ps-azure-spn-login</a></p>
+
+<p><a href="patrick.hayo@flsmidth.com">Patrick Hayo</a></p>
+
+<p><a href="https://www.twitter.com/N00ky2010"><img src="https://img.shields.io/twitter/follow/N00ky2010" alt="N00ky2010" /></a></p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<ul>
+  <li><a href="https://www.linkedin.com/in/janainahyldvang/">Janaina Laguardia Areal Hyldvang, Ph.D.</a></li>
+  <li><a href="https://www.linkedin.com/in/jakobdaugaard/?locale=en_US">Jakob Daugaard</a></li>
+  <li><a href="https://www.linkedin.com/in/senthil-kumar-bose-6900582/">Senthil Kumar Bose</a></li>
+  <li><a href="https://www.linkedin.com/in/javed-khan-674863164/">Javed Khan</a></li>
+</ul>
+
+<h2 id="referenzes">Referenzes</h2>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-4.4.0">How to: Create an Azure service principal</a></li>
+</ul>
+
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
   </div><a class="u-url" href="/jekyll/update/2020/07/18/Azure-Login-with-SPN-Account.html" hidden></a>
 </article>

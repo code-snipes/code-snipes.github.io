@@ -4,26 +4,133 @@ title:  "Azure Login with SPN Account"
 date:   2020-07-18 14:48:51 +0000
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+<!--
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** adminph-de, ps-azure-spn-login, N00ky2010, patrick.hayo@flsmidth.com
+-->
 
-Jekyll requires blog post files to be named according to the following format:
+# Azuer Service Principal (SPN) Login 
 
-`YEAR-MONTH-DAY-title.MARKUP`
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+<br />
+<p align="left">
+  <a href="https://github.com/adminph-de/ps-azure-spn-login">
+    <img src="{{site.baseurl}}/images/ps-azure-spn-login/logo.png" alt="Code Snipes" width="35%" height="35%">
+  </a>
+  <p align="left">
+    Use Azure SPN Account to run your PowerShell scripts.
+    <br />
+    <a href="https://github.com/adminph-de/ps-azure-spn-login/issues">Bug Report</a>
+    ·
+    <a href="https://github.com/adminph-de/ps-azure-spn-login/issues">Request Feature</a>
+  </p>
+</p>
 
-Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+## Content
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+- Azuer Service Principal (SPN) Login
+  - [Content](#content)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
+  - [Referenzes](#referenzes)
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+
+## Installation
+
+Clone the git reop to start:
+```bash
+https://git.com/adminph-de/ps-azure-spn-login
+``` 
+
+## Usage
+
+Change the JSON file (spn-login.json):
+```json
+[
+    {
+       "object": {
+           "TENANT_ID": "0000000-0000-0000-0000-00000000000",
+           "SPN_ID": "0000000-0000-0000-0000-00000000000",
+           "SPN_PW": "yourSecretSPNpassword"
+     }
+    }
+]
+```
+
+Execute the script:
+```bash
+spn-login.ps1 -JsonFile spn-account.json
+```
+
+Script Output:
+```
+You are authenicated (SPN) by:
+SPN_ID    : 0000000-0000-0000-0000-00000000000
+TENANT_ID : 0000000-0000-0000-0000-00000000000
+Don't forget to select a Subscrtiption by going ahead
+```
+>Check my usage of the code-snipe as an example in [ps-powerbi-asr-report](http://github.code-snipes.de/ps-powerbi-asr-report). I used it in the ``report.ps1`` script to authenticate before executing the script.
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. [Fork](https://docs.github.com/en/enterprise/2.13/user/articles/fork-a-repo) the Project
+2. Create your Feature Branch `git checkout -b feature/AmazingFeature`
+3. Commit your Changes `git commit -m 'Add some AmazingFeature'`
+4. Push to the Branch `git push origin feature/AmazingFeature`
+5. Open a Pull Request
+
+
+## License
+
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See `LICENSE` for more information.
+
+
+## Contact
+
+Project Link: [https://github.com/adminph-de/ps-azure-spn-login](https://github.com/adminph-de/ps-azure-spn-login)
+
+[Patrick Hayo](patrick.hayo@flsmidth.com)
+
+[![N00ky2010](https://img.shields.io/twitter/follow/N00ky2010)](https://www.twitter.com/N00ky2010)
+
+
+## Acknowledgements
+
+* [Janaina Laguardia Areal Hyldvang, Ph.D.](https://www.linkedin.com/in/janainahyldvang/)
+* [Jakob Daugaard](https://www.linkedin.com/in/jakobdaugaard/?locale=en_US)
+* [Senthil Kumar Bose](https://www.linkedin.com/in/senthil-kumar-bose-6900582/)
+* [Javed Khan](https://www.linkedin.com/in/javed-khan-674863164/)
+
+
+## Referenzes
+
+* [How to: Create an Azure service principal](https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-4.4.0)
+
+
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/adminph-de/ps-azure-spn-login.svg?style=flat-square
+[contributors-url]: https://github.com/adminph-de/ps-azure-spn-login/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/adminph-de/ps-azure-spn-login.svg?style=flat-square
+[forks-url]: https://github.com/adminph-de/ps-azure-spn-login/network/members
+[stars-shield]: https://img.shields.io/github/stars/adminph-de/ps-azure-spn-login.svg?style=flat-square
+[stars-url]: https://github.com/adminph-de/ps-azure-spn-login/stargazers
+[issues-shield]: https://img.shields.io/github/issues/adminph-de/ps-azure-spn-login.svg?style=flat-square
+[issues-url]: https://github.com/adminph-de/ps-azure-spn-login/issues
+[license-shield]: https://img.shields.io/github/license/adminph-de/ps-azure-spn-login.svg?style=flat-square
+[license-url]: https://github.com/adminph-de/ps-azure-spn-login/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/patrickhayo/?locale=en_US

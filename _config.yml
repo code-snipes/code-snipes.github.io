@@ -30,6 +30,7 @@ github_username:  adminph-de
 
 # Build settings
 theme: minima
+#theme: jekyll-theme-modernist
 plugins:
   - jekyll-feed
 

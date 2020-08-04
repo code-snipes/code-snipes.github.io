@@ -1,14 +1,14 @@
 
-title: Template Documentation
-description: Build the Project Documentation
-show_downloads: true
+title: Repository of code snipes
+description: The source to automate your daily work
+show_downloads: false
 google_analytics: UA-174405517-1
-url: "http://github.code-snipes.de/ps-code-snipes"
+url: "http://github.code-snipes.de"
 theme: jekyll-theme-modernist
 maintinance: true
 
 github:
   owner_name: "Patrick Hayo"
-  zip_url: https://github.com/adminph-de/ps-code-snipes/download.zip
-  tar_url: https://github.com/adminph-de/ps-code-snipes/download.tar
-  repository_url: https://github.com/adminph-de/ps-code-snipes
+  zip_url: 
+  tar_url: 
+  repository_url: https://github.com/adminph-de

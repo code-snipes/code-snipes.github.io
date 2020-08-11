@@ -6,6 +6,3 @@ docs:
 
 - title: Azure Site Recovery (ASR) PowerBI Reporting
   url: https://github.code-snipes.de/ps-powerbi-asr-report/
-
-- title: Azuer Service Principal (SPN) Login
-  url: https://github.code-snipes.de/ps-azure-spn-login/
